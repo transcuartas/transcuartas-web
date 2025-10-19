@@ -2,220 +2,153 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Multiservicios Cuartas</title>
+  <meta name="description" content="Multiservicios Cuartas: distribución y logística, transportes, limpiezas de choque, montajes, instalaciones sencillas e informática en Asturias. Puntualidad, confianza y resultados." />
+  <link rel="icon" href="img/logo.png">
   <link rel="stylesheet" href="styles.css" />
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      padding: 10px 40px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    header img {
-      height: 45px;
-      margin-right: 10px;
-      vertical-align: middle;
-    }
-
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #000;
-      font-weight: 500;
-    }
-
-    .cta {
-      background: #ffcc00;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .hero {
-      background: #0b2955;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    .hero h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      font-size: 1em;
-      opacity: 0.9;
-      margin-bottom: 40px;
-    }
-
-    .hero button {
-      background: #ffcc00;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    section {
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .logos {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .logos img {
-      height: 80px;
-      width: auto;
-      border-radius: 10px;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      padding: 10px;
-      opacity: 0;
-      transform: translateY(10px);
-      animation: fadeIn 1s ease forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    footer {
-      background: #0b2955;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9em;
-    }
-
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-    }
-  </style>
 </head>
-
 <body>
-  <header>
-    <div>
-      <img src="img/logo.png?v=2" alt="Multiservicios Cuartas Logo" />
-      <strong>Multiservicios Cuartas</strong>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio">
+        <img src="img/logo.png" alt="Logo Multiservicios Cuartas">
+        <span>Multiservicios Cuartas</span>
+      </a>
+      <nav class="menu">
+        <a href="#distribucion">Distribución</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#ventajas">Ventajas</a>
+        <a href="#nosotros">Quiénes somos</a>
+        <a class="btn btn-primary" href="#contacto">Presupuesto</a>
+      </nav>
     </div>
-    <nav>
-      <a href="#distribucion">Distribución</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#ventajas">Ventajas</a>
-      <a href="#nosotros">Quiénes somos</a>
-      <button class="cta">Presupuesto</button>
-    </nav>
   </header>
 
-  <section class="hero">
-    <h1>Movemos lo que necesites, arreglamos lo que te importa</h1>
-    <p>Soluciones profesionales para empresas y particulares en toda Asturias: distribución comercial, transporte, limpiezas de choque, montajes e instalaciones.</p>
-    <button onclick="document.querySelector('#servicios').scrollIntoView({behavior:'smooth'})">Ver servicios</button>
-  </section>
-
-  <section id="distribucion">
-    <h2>Distribución y logística</h2>
-    <p>Gestión, colocación y venta de productos en puntos de venta de Asturias. Servicio integral de transporte y reposición con entrega puntual y atención personalizada.</p>
-
-    <div class="logos">
-      <img src="img/chupachups.png?v=2" alt="Chupa Chups" />
-      <img src="img/miguelanez.png?v=2" alt="Migueláñez" />
-      <img src="img/lacasa.png?v=2" alt="Lacasa" />
-      <img src="img/asturarco.png?v=2" alt="Asturarco" />
-    </div>
-
-    <ul style="text-align:left; display:inline-block; margin-top:30px;">
-      <li>Distribución oficial de <b>Chupa Chups (Perfetti Van Melle)</b></li>
-      <li>Distribución oficial de <b>Grupo Migueláñez</b></li>
-      <li>Distribución oficial de <b>Grupo Lacasa</b></li>
-      <li>Distribución de <b>Asturarco</b></li>
-    </ul>
-  </section>
-
-  <section id="servicios" style="background:#f4f7fb;">
-    <h2>Servicios Multiservicios</h2>
-    <div class="logos" style="flex-wrap:wrap; max-width:1000px; margin:auto;">
-      <div>
-        <h3>Transportes</h3>
-        <p>Pequeñas mudanzas, recogida y entrega de muebles o electrodomésticos y transporte personalizado por Asturias rural.</p>
-      </div>
-      <div>
-        <h3>Limpiezas puntuales y de choque</h3>
-        <p>Limpieza tras reformas o mudanzas, garajes, trasteros y cocinas. Eliminamos suciedad incrustada con productos y maquinaria profesional.</p>
-      </div>
-      <div>
-        <h3>Montaje de muebles</h3>
-        <p>Instalación de muebles (IKEA, Conforama...), reparación de mesas, sillas y camas. Trabajo rápido y limpio.</p>
-      </div>
-      <div>
-        <h3>Reparaciones básicas del hogar</h3>
-        <p>Cambios de grifos, cisternas, ajustes de puertas y cerrojos, colocación de cortinas, estores y espejos.</p>
-      </div>
-      <div>
-        <h3>Instalaciones sencillas</h3>
-        <p>Bombillas, lámparas, telefonillos, detectores de humo y redes WiFi (routers y cableado).</p>
-      </div>
-      <div>
-        <h3>Servicios informáticos</h3>
-        <p>Instalación y configuración de ordenadores, impresoras y periféricos. Mantenimiento de equipos portátiles.</p>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="container hero-inner">
+      <h1>Movemos lo que necesites, arreglamos lo que te importa</h1>
+      <p class="lead">
+        Soluciones profesionales para empresas y particulares en toda Asturias:
+        distribución comercial, transporte, limpiezas de choque, montajes e instalaciones.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-accent" href="#servicios">Ver servicios</a>
+        <a class="btn btn-outline" href="#contacto">Pedir presupuesto</a>
       </div>
     </div>
   </section>
 
-  <section id="ventajas">
-    <h2>Ventajas</h2>
-    <ul style="text-align:left; display:inline-block; margin-top:30px;">
-      <li>Rapidez y flexibilidad en horarios</li>
-      <li>Presupuestos sin compromiso</li>
-      <li>Atención personalizada</li>
-      <li>Productos y maquinaria profesional</li>
-      <li>Trato de confianza y máxima discreción</li>
-      <li>Descuento especial para personas mayores</li>
-    </ul>
+  <!-- DISTRIBUCIÓN -->
+  <section id="distribucion" class="section">
+    <div class="container">
+      <h2>Distribución y logística</h2>
+      <p class="intro">
+        Gestión, colocación y venta de productos en puntos de venta de Asturias.
+        Servicio integral de transporte y reposición con entrega puntual y atención personalizada.
+      </p>
+
+      <div class="logo-pills">
+        <div class="pill"><img src="img/chupachups.png" alt="Chupa Chups"></div>
+        <div class="pill"><img src="img/miguelanez.png" alt="Migueláñez"></div>
+        <div class="pill"><img src="img/lacasa.png" alt="Lacasa"></div>
+        <div class="pill"><img src="img/asturarco.png" alt="Asturarco"></div>
+      </div>
+
+      <ul class="list">
+        <li>Distribución oficial de <strong>Chupa Chups (Perfetti Van Melle)</strong></li>
+        <li>Distribución oficial de <strong>Grupo Migueláñez</strong></li>
+        <li>Distribución oficial de <strong>Grupo Lacasa</strong></li>
+        <li>Distribución de <strong>Asturarco</strong></li>
+      </ul>
+    </div>
   </section>
 
-  <section id="nosotros" style="background:#f4f7fb;">
-    <h2>Quiénes somos</h2>
-    <p>Empresa asturiana con más de 25 años de experiencia en transporte, distribución y servicios técnicos.  
-      Unimos la eficiencia operativa con la cercanía y la seriedad en cada proyecto.</p>
-    <p><b>Puntualidad, confianza y resultados</b> son nuestros pilares.</p>
+  <!-- SERVICIOS -->
+  <section id="servicios" class="section alt">
+    <div class="container">
+      <h2>Servicios Multiservicios</h2>
 
-    <h3>Contacto</h3>
-    <p><b>Teléfono:</b> 620 853 011<br>
-       <b>Email:</b> multiservicios@transcuartas.com<br>
-       <b>WhatsApp:</b> <a href="https://wa.me/34620853011" target="_blank">Escríbenos</a></p>
-    <p style="font-size:0.9em; color:#666;">Zona de trabajo: Principado de Asturias</p>
+      <div class="grid">
+        <article class="card">
+          <h3>Transportes</h3>
+          <p>Pequeñas mudanzas, recogida y entrega de muebles o electrodomésticos y transporte personalizado por Asturias rural.</p>
+        </article>
+
+        <article class="card">
+          <h3>Limpiezas puntuales y de choque</h3>
+          <p>Limpieza tras reformas o mudanzas, garajes, trasteros y cocinas. Eliminamos suciedad incrustada con productos y maquinaria profesional.</p>
+        </article>
+
+        <article class="card">
+          <h3>Montaje de muebles</h3>
+          <p>Instalación de muebles (IKEA, Conforama…), reparación de mesas, sillas y camas. Trabajo rápido y limpio.</p>
+        </article>
+
+        <article class="card">
+          <h3>Reparaciones básicas del hogar</h3>
+          <p>Cambios de grifos, cisternas, ajustes de puertas y cerrojos, colocación de cortinas, estores y espejos.</p>
+        </article>
+
+        <article class="card">
+          <h3>Instalaciones sencillas</h3>
+          <p>Bombillas, lámparas, telefonillos, detectores de humo y redes WiFi (routers y cableado).</p>
+        </article>
+
+        <article class="card">
+          <h3>Servicios informáticos</h3>
+          <p>Instalación y configuración de ordenadores, impresoras y periféricos. Mantenimiento de equipos portátiles.</p>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>© 2025 Multiservicios Cuartas — Todos los derechos reservados</p>
-    <p><a href="mailto:multiservicios@transcuartas.com">multiservicios@transcuartas.com</a></p>
+  <!-- VENTAJAS -->
+  <section id="ventajas" class="section dark">
+    <div class="container">
+      <h2>Ventajas</h2>
+      <ul class="benefits">
+        <li>Rapidez y flexibilidad en horarios</li>
+        <li>Presupuestos sin compromiso</li>
+        <li>Atención personalizada</li>
+        <li>Productos y maquinaria profesional</li>
+        <li>Trato de confianza y máxima discreción</li>
+        <li>Descuento especial para personas mayores</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS + CONTACTO -->
+  <section id="nosotros" class="section">
+    <div class="container">
+      <h2>Quiénes somos</h2>
+      <p class="intro">
+        Empresa asturiana con más de 25 años de experiencia en transporte, distribución y servicios técnicos. 
+        Unimos la eficiencia operativa con la cercanía y la seriedad en cada proyecto.
+      </p>
+      <p class="intro"><strong>Puntualidad, confianza y resultados</strong> son nuestros pilares.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="section alt">
+    <div class="container">
+      <h2>Contacto</h2>
+      <div class="contact-grid">
+        <div class="c-card"><h4>Teléfono</h4><p><a href="tel:+34620853011">620 853 011</a></p></div>
+        <div class="c-card"><h4>Email</h4><p><a href="mailto:multiservicios@transcuartas.com">multiservicios@transcuartas.com</a></p></div>
+        <div class="c-card"><h4>WhatsApp</h4><p><a class="btn btn-success" target="_blank" rel="noopener" href="https://wa.me/34620853011">Escríbenos</a></p></div>
+      </div>
+      <p class="note">Zona de trabajo: Principado de Asturias</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Multiservicios Cuartas — Todos los derechos reservados</p>
+    </div>
   </footer>
 </body>
 </html>
