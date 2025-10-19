@@ -1,74 +1,250 @@
-:root{
-  --blue:#0b2647;      /* azul corporativo oscuro */
-  --red:#c62828;
-  --yellow:#f9c10b;
-  --ink:#122033;
-  --bg:#f6f8fb;
-  --soft:#eef2f7;
-  --white:#ffffff;
-  --muted:#6b7a90;
-  --green:#23a26d;
+/* ===============================
+   MULTISERVICIOS CUARTAS 2025
+   Estilo profesional con azul, rojo y blanco
+   =============================== */
+
+:root {
+  --azul: #0b2955;
+  --rojo: #d62828;
+  --amarillo: #ffcc00;
+  --blanco: #ffffff;
+  --gris-claro: #f4f7fb;
+  --texto: #1a1a1a;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --radius: 10px;
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg)}
-img{max-width:100%;display:block}
-a{color:inherit;text-decoration:none}
-
-.container{width:min(1120px,92%);margin-inline:auto}
-.section{padding:64px 0;background:var(--white)}
-.section.alt{background:var(--soft)}
-.section.dark{background:var(--blue);color:var(--white)}
-.section h2{margin:0 0 16px;font-size:32px;letter-spacing:.2px}
-.lead{font-size:18px;color:var(--muted);max-width:840px}
-
-.topbar{position:sticky;top:0;z-index:10;background:var(--white);border-bottom:1px solid #e6e9ef}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-.brand{display:flex;align-items:center;gap:10px;font-weight:700}
-.brand img{width:40px;height:40px;border-radius:999px}
-.topbar nav{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.topbar nav a{padding:8px 10px;border-radius:10px;color:var(--ink)}
-.topbar nav a:hover{background:#eaf0f8}
-.btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700;border:2px solid transparent}
-.btn-yellow{background:var(--yellow)}
-.btn-outline{border-color:var(--blue);color:var(--blue)}
-.btn-green{background:var(--green);color:var(--white)}
-.btn:hover{filter:brightness(.95)}
-
-.hero{background:linear-gradient(180deg,#112a4d, #0b2647 60%);color:var(--white);padding:96px 0}
-.hero-inner{display:grid;gap:16px}
-.hero h1{margin:0;font-size:38px;line-height:1.2}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap}
-
-.logos-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:24px 0}
-.logo-card{background:var(--white);border-radius:14px;box-shadow:0 6px 16px rgba(15,34,58,.08);padding:14px;display:flex;align-items:center;justify-content:center}
-.logo-card img{max-height:60px;opacity:.95}
-
-.bullets{margin:10px 0 0 18px}
-.bullets li{margin:8px 0;color:var(--muted)}
-
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:18px}
-.card{background:var(--white);border-radius:16px;box-shadow:0 10px 24px rgba(16,24,40,.08);padding:18px}
-.card h3{margin:0 0 8px;font-size:20px}
-.card p{margin:0;color:var(--muted)}
-
-.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 0}
-.grid-2 li{background:rgba(255,255,255,.1);padding:12px 14px;border-radius:12px}
-
-.contact{display:grid;gap:16px}
-.contact-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:8px}
-.c-card{background:var(--white);padding:16px;border-radius:14px;box-shadow:0 8px 20px rgba(15,34,58,.08)}
-.c-card h4{margin:0 0 6px}
-.small{color:var(--muted);margin-top:10px}
-
-.footer{background:#0f1d33;color:#c9d3e6;padding:24px 0;text-align:center}
-
-@media (max-width:980px){
-  .cards{grid-template-columns:1fr 1fr}
-  .logos-grid{grid-template-columns:1fr 1fr}
-  .grid-2{grid-template-columns:1fr}
-  .contact-cards{grid-template-columns:1fr}
+/* RESETEO GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@media (max-width:560px){
-  .hero h1{font-size:30px}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--texto);
+  background-color: var(--blanco);
+  overflow-x: hidden;
+}
+
+/* ===============================
+   CABECERA
+   =============================== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--blanco);
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px var(--sombra);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+header img {
+  height: 45px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+header strong {
+  font-size: 1.1em;
+  color: var(--azul);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: var(--azul);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--rojo);
+}
+
+.cta {
+  background: var(--amarillo);
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  color: var(--azul);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cta:hover {
+  background: var(--rojo);
+  color: var(--blanco);
+}
+
+/* ===============================
+   SECCIÓN HERO
+   =============================== */
+.hero {
+  background: var(--azul);
+  color: var(--blanco);
+  text-align: center;
+  padding: 100px 20px 90px;
+}
+
+.hero h1 {
+  font-size: 2.4em;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 1.1em;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.6em;
+}
+
+.hero button {
+  background: var(--amarillo);
+  border: none;
+  padding: 12px 30px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  color: var(--azul);
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: var(--rojo);
+  color: var(--blanco);
+}
+
+/* ===============================
+   SECCIONES GENERALES
+   =============================== */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: var(--azul);
+  font-size: 1.8em;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: var(--rojo);
+  margin: 10px auto 30px;
+  border-radius: 2px;
+}
+
+/* ===============================
+   LOGOS DE MARCAS
+   =============================== */
+.logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.logos img {
+  height: 80px;
+  width: auto;
+  border-radius: var(--radius);
+  background: var(--blanco);
+  box-shadow: 0 2px 10px var(--sombra);
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   SERVICIOS
+   =============================== */
+#servicios {
+  background: var(--gris-claro);
+}
+
+#servicios h3 {
+  color: var(--azul);
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+#servicios p {
+  color: #333;
+  font-size: 0.95em;
+  line-height: 1.5em;
+  max-width: 280px;
+  margin: 0 auto 25px;
+}
+
+/* ===============================
+   LISTAS / DETALLES
+   =============================== */
+ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+ul li {
+  background: var(--gris-claro);
+  border-left: 4px solid var(--rojo);
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: var(--radius);
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===============================
+   CONTACTO Y FOOTER
+   =============================== */
+#nosotros {
+  background: var(--gris-claro);
+}
+
+#nosotros h3 {
+  color: var(--rojo);
+  margin-top: 40px;
+}
+
+footer {
+  background: var(--azul);
+  color: var(--blanco);
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 0.95em;
+}
+
+footer a {
+  color: var(--amarillo);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--blanco);
 }
